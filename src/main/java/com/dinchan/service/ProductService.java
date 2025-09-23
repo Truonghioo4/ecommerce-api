@@ -12,7 +12,7 @@ public interface ProductService {
     public void deleteProduct(Long id);
     public Product updateProduct(Long id, Product product);
     public Product findProductById(Long id);
-    public List<Product> searchProducts();
+    public List<Product> searchProducts(String query);
     public Page<Product> getAllProducts(
             String category,
             String brand,
