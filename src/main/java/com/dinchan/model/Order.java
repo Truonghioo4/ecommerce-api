@@ -23,7 +23,7 @@ public class Order {
     @ManyToOne
     private User user;
 
-    private String sellerId;
+    private Long sellerId;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> orderItems = new ArrayList<>();

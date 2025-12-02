@@ -1,0 +1,13 @@
+package com.dinchan.request;
+
+import com.dinchan.model.Review;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public class CreateReviewRequest {
+    private String reviewText;
+    private double reviewRating;
+    private List<String> productImages;
+}
