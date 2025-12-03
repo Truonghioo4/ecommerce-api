@@ -2,14 +2,7 @@ package com.dinchan.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.dinchan.model.Cart;
 import com.dinchan.model.CartItem;
@@ -38,10 +31,10 @@ public class CartController {
     User user = userService.findUserByJwtToken(jwt);
     Cart cart = cartService.findUserCart(user);
     
-    return new ResponseEntity<Cart>(cart, HttpStatus.OK);
+    return new ResponseEntity<>(cart, HttpStatus.OK);
   }
 
-  @PutMapping("/add")
+  @PostMapping("/add")
   public ResponseEntity<CartItem> addItemToCard(@RequestBody AddItemRequest req, 
     @RequestHeader("Authorization") String jwt) throws Exception{
     
@@ -73,7 +66,7 @@ public class CartController {
     if(cartItem.getQuantity()>0){
       updatedCartItem = cartItemService.updateCartItem(user.getId(), cartItemId, cartItem);
     }
-    return new ResponseEntity<CartItem>(updatedCartItem, HttpStatus.ACCEPTED);
+    return new ResponseEntity<>(updatedCartItem, HttpStatus.ACCEPTED);
   }
 
   

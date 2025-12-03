@@ -1,5 +1,6 @@
 package com.dinchan.request;
 
+import com.dinchan.model.Category;
 import lombok.Data;
 
 import java.util.List;
@@ -11,8 +12,8 @@ public class CreateProductRequest {
     private int sellingPrice;
     private String color;
     private List<String> images;
-    private String category;
-    private String category2;
-    private String category3;
+    private Category category;
+    private Category category2;
+    private Category category3;
     private String sizes;
 }

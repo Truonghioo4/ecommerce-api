@@ -31,35 +31,51 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(CreateProductRequest req, Seller seller) {
-        Category category1 = categoryRepository.findByCategoryId(req.getCategory());
-        if(category1 == null) {
-            Category category = new Category();
-            category.setCategoryId(req.getCategory());
-            category.setLevel(1);
-            category1 = categoryRepository.save(category);
+        Category directCategory = null;
+        Category category1 = null;
+        Category category2 = null;
+        Category category3 = null;
+        if(req.getCategory() != null) {
+            category1 = categoryRepository.findByCategoryId(req.getCategory().getCategoryId());
+            if(category1 == null) {
+                Category category = new Category();
+                category.setCategoryId(req.getCategory().getCategoryId());
+                category.setName(req.getCategory().getName());
+                category.setLevel(1);
+                category1 = categoryRepository.save(category);
+            }
+            directCategory = category1;
         }
 
-        Category category2 = categoryRepository.findByCategoryId(req.getCategory2());
-        if(category2 == null) {
-            Category category = new Category();
-            category.setCategoryId(req.getCategory2());
-            category.setLevel(2);
-            category.setParentCategory(category1);
-            category2 = categoryRepository.save(category);
+        if(req.getCategory2() != null && req.getCategory() !=null){
+            category2 = categoryRepository.findByCategoryId(req.getCategory2().getCategoryId());
+            if(category2 == null) {
+                Category category = new Category();
+                category.setCategoryId(req.getCategory2().getCategoryId());
+                category.setName(req.getCategory2().getName());
+                category.setLevel(2);
+                category.setParentCategory(category1);
+                category2 = categoryRepository.save(category);
+            }
+            directCategory = category2;
+        }
+        if(req.getCategory3() != null && req.getCategory2() != null) {
+            category3 =  categoryRepository.findByCategoryId(req.getCategory3().getCategoryId());
+            if(category3 == null ) {
+                Category category = new Category();
+                category.setCategoryId(req.getCategory3().getCategoryId());
+                category.setName(req.getCategory3().getName());
+                category.setLevel(3);
+                category.setParentCategory(category2);
+                category3 = categoryRepository.save(category);
+            }
+            directCategory = category3;
         }
 
-        Category category3 = categoryRepository.findByCategoryId(req.getCategory3());
-        if(category3 == null) {
-            Category category = new Category();
-            category.setCategoryId(req.getCategory3());
-            category.setLevel(3);
-            category.setParentCategory(category2);
-            category3 = categoryRepository.save(category);
-        }
         int discountPercentage = calculateDiscountPercentage(req.getMrpPrice(), req.getSellingPrice());
         Product product = new Product();
         product.setSeller(seller);
-        product.setCategory(category3);
+        product.setCategory(directCategory);
         product.setDescription(req.getDescription());
         product.setCreatedAt(LocalDateTime.now());
         product.setTitle(req.getTitle());

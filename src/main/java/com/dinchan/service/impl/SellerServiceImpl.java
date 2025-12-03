@@ -40,11 +40,9 @@ public class SellerServiceImpl implements SellerService {
         newSeller.setEmail(seller.getEmail());
         newSeller.setPassword(passwordEncoder.encode(seller.getPassword()));
         newSeller.setSellerName(seller.getSellerName());
-        newSeller.setGSTIN(seller.getGSTIN());
         newSeller.setPickupAddress(savedAddress);
         newSeller.setRole(USER_ROLE.ROLE_SELLER);
         newSeller.setPhoneNumber(seller.getPhoneNumber());
-        newSeller.setBankDetails(seller.getBankDetails());
         newSeller.setBusinessDetails(seller.getBusinessDetails());
 
         return sellerRepository.save(newSeller);
@@ -67,7 +65,7 @@ public class SellerServiceImpl implements SellerService {
 
     @Override
     public List<Seller> getAllSellers(AccountStatus status) {
-        return sellerRepository.findByAccountStatus(status);
+        return sellerRepository.findAll();
     }
 
     @Override
@@ -85,17 +83,6 @@ public class SellerServiceImpl implements SellerService {
         if (seller.getBusinessDetails() != null && seller.getBusinessDetails().getBusinessName() != null) {
             existedSeller.getBusinessDetails().setBusinessName(seller.getBusinessDetails().getBusinessName());
         }
-        if (seller.getBankDetails() != null && seller.getBankDetails().getAccountHolderName() != null && seller.getBankDetails().getIfscCode() != null && seller.getBankDetails().getAccountNumber() != null) {
-            existedSeller.getBankDetails().setAccountHolderName(
-                    seller.getBankDetails().getAccountHolderName()
-            );
-            existedSeller.getBankDetails().setAccountNumber(
-                    seller.getBankDetails().getAccountNumber()
-            );
-            existedSeller.getBankDetails().setIfscCode(
-                    seller.getBankDetails().getIfscCode()
-            );
-        }
         if (seller.getPickupAddress() != null && seller.getPickupAddress().getAddress() != null
             && seller.getPickupAddress().getPhoneNumber() != null
             && seller.getPickupAddress().getCity() != null
@@ -108,9 +95,6 @@ public class SellerServiceImpl implements SellerService {
                         .setPhoneNumber(seller.getPickupAddress().getPhoneNumber());
                 existedSeller.getPickupAddress().setZipCode(seller.getPickupAddress().getZipCode());
         }
-        if (seller.getGSTIN() != null) {
-            existedSeller.setGSTIN(seller.getGSTIN());
-        }
         return sellerRepository.save(existedSeller);
     }
 
@@ -120,17 +104,4 @@ public class SellerServiceImpl implements SellerService {
         sellerRepository.delete(existedSeller);
     }
 
-    @Override
-    public Seller verifyEmail(String email, String otp) throws Exception {
-        Seller seller = getSellerByEmail(email);
-        seller.setEmailVerified(true);
-        return sellerRepository.save(seller);
-    }
-
-    @Override
-    public Seller updateAccountStatus(Long id, AccountStatus status) throws Exception {
-        Seller seller = getSellerById(id);
-        seller.setAccountStatus(status);
-        return sellerRepository.save(seller);
-    }
 }
