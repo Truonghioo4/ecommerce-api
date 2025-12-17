@@ -26,6 +26,7 @@ public class OrderServiceImpl implements OrderService {
   @Override
   public Set<Order> createOrder(User user, Address shippingAdress, Cart cart) {
 
+
     if (!user.getAddresses().contains(shippingAdress)) {
       user.getAddresses().add(shippingAdress);
     }

@@ -9,7 +9,7 @@ public class CreateProductRequest {
     private String title;
     private String description;
     private int mrpPrice;
-    private int sellingPrice;
+    private int sellPrice;
     private String color;
     private List<String> images;
     private Category category;

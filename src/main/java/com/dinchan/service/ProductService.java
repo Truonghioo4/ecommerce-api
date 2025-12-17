@@ -13,18 +13,7 @@ public interface ProductService {
     public Product updateProduct(Long id, Product product);
     public Product findProductById(Long id);
     public List<Product> searchProducts(String query);
-    public Page<Product> getAllProducts(
-            String category,
-            String brand,
-            String colors,
-            String sizes,
-            Integer minPrice,
-            Integer maxPrice,
-            Integer minDiscount,
-            String sort,
-            String stock,
-            Integer pageNumber
-    );
+    public List<Product> getAllProducts();
     public List<Product> getProductBySellerId(Long id);
 
 }

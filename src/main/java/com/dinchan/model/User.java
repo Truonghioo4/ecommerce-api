@@ -1,7 +1,6 @@
 package com.dinchan.model;
 
 import com.dinchan.domain.USER_ROLE;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 

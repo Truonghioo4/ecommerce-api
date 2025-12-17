@@ -27,18 +27,29 @@ public class WishlistController {
         return ResponseEntity.ok(wishlist);
     }
 
-    @PostMapping("/add-product/{productId}")
+    @PostMapping("/update-product/{productId}")
     public ResponseEntity<Wishlist> addProductToWishlist(
             @PathVariable Long productId,
             @RequestHeader("Authorization") String jwt) throws Exception {
         Product product = productService.findProductById(productId);
         User user = userService.findUserByJwtToken(jwt);
-        Wishlist updatedWishlist = wishlistService.addProductToWishlist(
+        Wishlist updatedWishlist = wishlistService.updateProductToWishlist(
                 user,
                 product
         );
-
         return ResponseEntity.ok(updatedWishlist);
     }
 
+    @DeleteMapping("/remove-product/{productId}")
+    public ResponseEntity<String> removeProductFromWishlist(
+            @PathVariable Long productId,
+            @RequestHeader("Authorization") String jwt) throws Exception {
+        Product product = productService.findProductById(productId);
+        User user = userService.findUserByJwtToken(jwt);
+        wishlistService.removeProductFromWishlist(
+                user,
+                product
+        );
+        return ResponseEntity.ok("Deleted Success");
+    }
 }

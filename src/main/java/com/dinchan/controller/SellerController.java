@@ -48,8 +48,8 @@ public class SellerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Seller>> getAllSellers(@RequestParam(required = false) AccountStatus status) {
-        List<Seller> sellers = sellerService.getAllSellers(status);
+    public ResponseEntity<List<Seller>> getAllSellers() {
+        List<Seller> sellers = sellerService.getAllSellers();
         return ResponseEntity.ok(sellers);
     }
 

@@ -1,0 +1,393 @@
+[
+  {
+    "title": "Samsung Galaxy S23 Ultra",
+    "description": "Premium flagship smartphone with 200MP camera, 6.8 inch Dynamic AMOLED display, Snapdragon 8 Gen 2 processor",
+    "mrpPrice": 1299,
+    "sellPrice": 1099,
+    "color": "Phantom Black",
+    "images": ["https://example.com/galaxy-s23-1.jpg", "https://example.com/galaxy-s23-2.jpg"],
+    "category": {
+      "categoryId": "electronics",
+      "name": "Electronics"
+    },
+    "category2": {
+      "categoryId": "smartphones",
+      "name": "Smartphones"
+    },
+    "category3": {
+      "categoryId": "android",
+      "name": "Android Phones"
+    },
+    "stock": "In Stock",
+    "sizes": "256GB"
+  },
+  {
+    "title": "Apple MacBook Pro 14",
+    "description": "Professional laptop with M3 Pro chip, 14-inch Liquid Retina XDR display, 18GB unified memory",
+    "mrpPrice": 2499,
+    "sellPrice": 2299,
+    "color": "Space Gray",
+    "images": ["https://example.com/macbook-1.jpg", "https://example.com/macbook-2.jpg"],
+    "category": {
+      "categoryId": "electronics",
+      "name": "Electronics"
+    },
+    "category2": {
+      "categoryId": "laptops",
+      "name": "Laptops"
+    },
+    "category3": {
+      "categoryId": "apple-laptops",
+      "name": "Apple Laptops"
+    },
+    "stock": "In Stock",
+    "sizes": "512GB SSD"
+  },
+  {
+    "title": "Nike Air Max 270",
+    "description": "Men's lifestyle shoes with Max Air cushioning, breathable mesh upper, modern design",
+    "mrpPrice": 150,
+    "sellPrice": 120,
+    "color": "Black/White",
+    "images": ["https://example.com/nike-airmax-1.jpg", "https://example.com/nike-airmax-2.jpg"],
+    "category": {
+      "categoryId": "fashion",
+      "name": "Fashion"
+    },
+    "category2": {
+      "categoryId": "shoes",
+      "name": "Shoes"
+    },
+    "category3": {
+      "categoryId": "mens-shoes",
+      "name": "Men's Shoes"
+    },
+    "stock": "In Stock",
+    "sizes": "US 10"
+  },
+  {
+    "title": "Sony WH-1000XM5 Wireless Headphones",
+    "description": "Industry-leading noise canceling headphones with premium sound quality, 30-hour battery life",
+    "mrpPrice": 399,
+    "sellPrice": 349,
+    "color": "Silver",
+    "images": ["https://example.com/sony-headphones-1.jpg", "https://example.com/sony-headphones-2.jpg"],
+    "category": {
+      "categoryId": "electronics",
+      "name": "Electronics"
+    },
+    "category2": {
+      "categoryId": "audio",
+      "name": "Audio"
+    },
+    "category3": {
+      "categoryId": "headphones",
+      "name": "Headphones"
+    },
+    "stock": "In Stock",
+    "sizes": "One Size"
+  },
+  {
+    "title": "Levi's 501 Original Fit Jeans",
+    "description": "Classic straight fit jeans, authentic denim, button fly, timeless style",
+    "mrpPrice": 98,
+    "sellPrice": 69,
+    "color": "Dark Blue",
+    "images": ["https://example.com/levis-jeans-1.jpg", "https://example.com/levis-jeans-2.jpg"],
+    "category": {
+      "categoryId": "fashion",
+      "name": "Fashion"
+    },
+    "category2": {
+      "categoryId": "mens-clothing",
+      "name": "Men's Clothing"
+    },
+    "stock": "In Stock",
+    "sizes": "32x32"
+  },
+  {
+    "title": "Canon EOS R6 Mark II",
+    "description": "Full-frame mirrorless camera with 24.2MP sensor, 4K 60p video, advanced autofocus system",
+    "mrpPrice": 2499,
+    "sellPrice": 2299,
+    "color": "Black",
+    "images": ["https://example.com/canon-r6-1.jpg", "https://example.com/canon-r6-2.jpg"],
+    "category": {
+      "categoryId": "electronics",
+      "name": "Electronics"
+    },
+    "category2": {
+      "categoryId": "cameras",
+      "name": "Cameras"
+    },
+    "category3": {
+      "categoryId": "mirrorless-cameras",
+      "name": "Mirrorless Cameras"
+    },
+    "stock": "Limited Stock",
+    "sizes": "Body Only"
+  },
+  {
+    "title": "Adidas Ultraboost 22",
+    "description": "Women's running shoes with Boost cushioning, Primeknit upper, responsive ride",
+    "mrpPrice": 190,
+    "sellPrice": 142,
+    "color": "Core Black",
+    "images": ["https://example.com/adidas-ultraboost-1.jpg", "https://example.com/adidas-ultraboost-2.jpg"],
+    "category": {
+      "categoryId": "fashion",
+      "name": "Fashion"
+    },
+    "category2": {
+      "categoryId": "womens-shoes",
+      "name": "Women's Shoes"
+    },
+    "stock": "In Stock",
+    "sizes": "US 8"
+  },
+  {
+    "title": "KitchenAid Stand Mixer",
+    "description": "5-quart tilt-head stand mixer with 10 speeds, includes whisk, dough hook, and flat beater",
+    "mrpPrice": 449,
+    "sellPrice": 379,
+    "color": "Empire Red",
+    "images": ["https://example.com/kitchenaid-1.jpg", "https://example.com/kitchenaid-2.jpg"],
+    "category": {
+      "categoryId": "home-kitchen",
+      "name": "Home & Kitchen"
+    },
+    "category2": {
+      "categoryId": "kitchen-appliances",
+      "name": "Kitchen Appliances"
+    },
+    "stock": "In Stock",
+    "sizes": "5 Quart"
+  },
+  {
+    "title": "The North Face Nuptse Jacket",
+    "description": "Iconic insulated puffer jacket with 700-fill down, water-resistant finish, warm and durable",
+    "mrpPrice": 299,
+    "sellPrice": 239,
+    "color": "TNF Black",
+    "images": ["https://example.com/tnf-nuptse-1.jpg", "https://example.com/tnf-nuptse-2.jpg"],
+    "category": {
+      "categoryId": "fashion",
+      "name": "Fashion"
+    },
+    "category2": {
+      "categoryId": "outerwear",
+      "name": "Outerwear"
+    },
+    "category3": {
+      "categoryId": "winter-jackets",
+      "name": "Winter Jackets"
+    },
+    "stock": "In Stock",
+    "sizes": "L"
+  },
+  {
+    "title": "iPad Air 5th Generation",
+    "description": "10.9-inch Liquid Retina display, M1 chip, 12MP front camera with Center Stage, 5G capable",
+    "mrpPrice": 599,
+    "sellPrice": 549,
+    "color": "Space Gray",
+    "images": ["https://example.com/ipad-air-1.jpg", "https://example.com/ipad-air-2.jpg"],
+    "category": {
+      "categoryId": "electronics",
+      "name": "Electronics"
+    },
+    "category2": {
+      "categoryId": "tablets",
+      "name": "Tablets"
+    },
+    "stock": "In Stock",
+    "sizes": "64GB"
+  },
+  {
+    "title": "IKEA KALLAX Shelf Unit",
+    "description": "Versatile storage solution with 8 cube compartments, modern design, easy to assemble",
+    "mrpPrice": 129,
+    "sellPrice": 99,
+    "color": "White",
+    "images": ["https://example.com/kallax-1.jpg", "https://example.com/kallax-2.jpg"],
+    "category": {
+      "categoryId": "home-kitchen",
+      "name": "Home & Kitchen"
+    },
+    "category2": {
+      "categoryId": "furniture",
+      "name": "Furniture"
+    },
+    "stock": "In Stock",
+    "sizes": "4x2 Cubes"
+  },
+  {
+    "title": "Instant Pot Duo Plus",
+    "description": "9-in-1 electric pressure cooker with sterilizer, slow cooker, rice cooker, and more",
+    "mrpPrice": 139,
+    "sellPrice": 99,
+    "color": "Stainless Steel",
+    "images": ["https://example.com/instant-pot-1.jpg", "https://example.com/instant-pot-2.jpg"],
+    "category": {
+      "categoryId": "home-kitchen",
+      "name": "Home & Kitchen"
+    },
+    "category2": {
+      "categoryId": "kitchen-appliances",
+      "name": "Kitchen Appliances"
+    },
+    "category3": {
+      "categoryId": "pressure-cookers",
+      "name": "Pressure Cookers"
+    },
+    "stock": "In Stock",
+    "sizes": "6 Quart"
+  },
+  {
+    "title": "Ray-Ban Aviator Classic Sunglasses",
+    "description": "Iconic metal frame sunglasses with crystal green lenses, 100% UV protection",
+    "mrpPrice": 168,
+    "sellPrice": 135,
+    "color": "Gold/Green",
+    "images": ["https://example.com/rayban-1.jpg", "https://example.com/rayban-2.jpg"],
+    "category": {
+      "categoryId": "fashion",
+      "name": "Fashion"
+    },
+    "category2": {
+      "categoryId": "accessories",
+      "name": "Accessories"
+    },
+    "stock": "In Stock",
+    "sizes": "58mm"
+  },
+  {
+    "title": "Fitbit Charge 6",
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, sleep tracking, 7-day battery life",
+    "mrpPrice": 159,
+    "sellPrice": 139,
+    "color": "Black",
+    "images": ["https://example.com/fitbit-1.jpg", "https://example.com/fitbit-2.jpg"],
+    "discountPercent": 13,
+    "numRatings": 634,
+    "category": {
+      "categoryId": "electronics",
+      "name": "Electronics"
+    },
+    "category2": {
+      "categoryId": "wearables",
+      "name": "Wearables"
+    },
+    "category3": {
+      "categoryId": "fitness-trackers",
+      "name": "Fitness Trackers"
+    },
+    "stock": "In Stock",
+    "sizes": "S/L Band"
+  },
+  {
+    "title": "Zara Oversized Blazer",
+    "description": "Women's tailored blazer with shoulder pads, front button closure, classic office wear",
+    "mrpPrice": 119,
+    "sellPrice": 89,
+    "color": "Navy Blue",
+    "images": ["https://example.com/zara-blazer-1.jpg", "https://example.com/zara-blazer-2.jpg"],
+    "category": {
+      "categoryId": "fashion",
+      "name": "Fashion"
+    },
+    "category2": {
+      "categoryId": "womens-clothing",
+      "name": "Women's Clothing"
+    },
+    "stock": "In Stock",
+    "sizes": "M"
+  },
+  {
+    "title": "Dyson V15 Detect Cordless Vacuum",
+    "description": "Powerful cordless vacuum with laser dust detection, LCD screen, 60-minute runtime",
+    "mrpPrice": 749,
+    "sellPrice": 649,
+    "color": "Yellow/Nickel",
+    "images": ["https://example.com/dyson-v15-1.jpg", "https://example.com/dyson-v15-2.jpg"],
+    "category": {
+      "categoryId": "home-kitchen",
+      "name": "Home & Kitchen"
+    },
+    "category2": {
+      "categoryId": "home-appliances",
+      "name": "Home Appliances"
+    },
+    "stock": "In Stock",
+    "sizes": "Standard"
+  },
+  {
+    "title": "Samsonite Winfield 2 Hardside Luggage",
+    "description": "28-inch spinner luggage with scratch-resistant finish, TSA lock, lightweight design",
+    "mrpPrice": 199,
+    "sellPrice": 149,
+    "color": "Charcoal",
+    "images": ["https://example.com/samsonite-1.jpg", "https://example.com/samsonite-2.jpg"],
+    "category": {
+      "categoryId": "luggage-travel",
+      "name": "Luggage & Travel"
+    },
+    "category2": {
+      "categoryId": "suitcases",
+      "name": "Suitcases"
+    },
+    "stock": "In Stock",
+    "sizes": "28 inch"
+  },
+  {
+    "title": "Logitech MX Master 3S Wireless Mouse",
+    "description": "Advanced wireless mouse with quiet clicks, 8K DPI sensor, customizable buttons",
+    "mrpPrice": 99,
+    "sellPrice": 84,
+    "color": "Graphite",
+    "images": ["https://example.com/logitech-mx-1.jpg", "https://example.com/logitech-mx-2.jpg"],
+    "category": {
+      "categoryId": "electronics",
+      "name": "Electronics"
+    },
+    "category2": {
+      "categoryId": "computer-accessories",
+      "name": "Computer Accessories"
+    },
+    "stock": "In Stock",
+    "sizes": "One Size"
+  },
+  {
+    "title": "L'Oreal Paris Revitalift Face Cream",
+    "description": "Anti-aging moisturizer with hyaluronic acid and Pro-Retinol, reduces wrinkles, hydrates skin",
+    "mrpPrice": 29,
+    "sellPrice": 22,
+    "color": "N/A",
+    "images": ["https://example.com/loreal-cream-1.jpg", "https://example.com/loreal-cream-2.jpg"],
+    "category": {
+      "categoryId": "beauty-health",
+      "name": "Beauty & Health"
+    },
+    "category2": {
+      "categoryId": "skincare",
+      "name": "Skincare"
+    },
+    "stock": "In Stock",
+    "sizes": "50ml"
+  },
+  {
+    "title": "Yoga Mat Premium Non-Slip",
+    "description": "6mm thick exercise mat with carrying strap, eco-friendly TPE material, perfect for yoga and pilates",
+    "mrpPrice": 45,
+    "sellPrice": 32,
+    "color": "Purple",
+    "images": ["https://example.com/yoga-mat-1.jpg", "https://example.com/yoga-mat-2.jpg"],
+    "category": {
+      "categoryId": "sports-outdoors",
+      "name": "Sports & Outdoors"
+    },
+    "stock": "In Stock",
+    "sizes": "183x61cm"
+  }
+]
+

@@ -72,7 +72,7 @@ public class ProductServiceImpl implements ProductService {
             directCategory = category3;
         }
 
-        int discountPercentage = calculateDiscountPercentage(req.getMrpPrice(), req.getSellingPrice());
+        int discountPercentage = calculateDiscountPercentage(req.getMrpPrice(), req.getSellPrice());
         Product product = new Product();
         product.setSeller(seller);
         product.setCategory(directCategory);
@@ -80,7 +80,7 @@ public class ProductServiceImpl implements ProductService {
         product.setCreatedAt(LocalDateTime.now());
         product.setTitle(req.getTitle());
         product.setColor(req.getColor());
-        product.setSellPrice(req.getSellingPrice());
+        product.setSellPrice(req.getSellPrice());
         product.setImages(req.getImages());
         product.setMrpPrice(req.getMrpPrice());
         product.setSizes(req.getSizes());
@@ -122,49 +122,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Page<Product> getAllProducts(String category, String brand, String colors, String sizes, Integer minPrice, Integer maxPrice, Integer minDiscount, String sort, String stock, Integer pageNumber) {
-        Specification<Product> spec = (root, query, criteriaBuilder) -> {
-            List<Predicate> predicates = new ArrayList<>();
-            if(category != null) {
-                Join<Product, Category> categoryJoin = root.join("category");
-                predicates.add(criteriaBuilder.equal(categoryJoin.get("categoryId"), category));
-            }
-            if(colors != null && !colors.isEmpty()) {
-                System.out.println("colors: " + colors);
-                predicates.add(criteriaBuilder.equal(root.get("color"),colors));
-            }
-
-            if(sizes != null && !sizes.isEmpty()) {
-                predicates.add(criteriaBuilder.equal(root.get("size"), sizes));
-            }
-            if(minPrice != null) {
-                predicates.add(criteriaBuilder.greaterThanOrEqualTo(root.get("sellingPrice"), minPrice));
-            }
-            if(maxPrice != null) {
-                predicates.add(criteriaBuilder.lessThanOrEqualTo(root.get("sellingPrice"), maxPrice));
-            }
-            if(minDiscount != null) {
-                predicates.add(criteriaBuilder.greaterThanOrEqualTo(root.get("discountPercent"), minDiscount));
-            }
-            if(stock != null) {
-                predicates.add(criteriaBuilder.equal(root.get("stock"), stock));
-            }
-            return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
-        };
-        Pageable pageable;
-        if(sort != null && !sort.isEmpty()) {
-            pageable = switch (sort) {
-                case "price_low" -> PageRequest.of(pageNumber != null ? pageNumber : 0, 10,
-                        Sort.by("sellingPrice").ascending());
-                case "price_high" -> PageRequest.of(pageNumber != null ? pageNumber : 0, 10,
-                        Sort.by("sellingPrice").descending());
-                default -> PageRequest.of(pageNumber != null ? pageNumber : 0, 10,
-                        Sort.unsorted());
-            };
-        } else {
-            pageable = PageRequest.of(pageNumber != null ? pageNumber : 0, 10, Sort.unsorted());
-        }
-        return productRepository.findAll(spec,pageable);
+    public List<Product> getAllProducts() {
+        return productRepository.findAll();
     }
 
     @Override

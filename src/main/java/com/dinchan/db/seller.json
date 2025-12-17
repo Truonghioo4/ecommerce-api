@@ -1,0 +1,71 @@
+[
+  {
+    "sellerName": "Seller 1",
+    "phoneNumber": "+1-555-0101",
+    "email": "seller1@gmail.com",
+    "password": "Dinhtruong2k",
+    "businessDetails": {
+      "businessName": "TechGadgets Pro",
+      "businessEmail": "support@techgadgets.com",
+      "businessPhoneNumber": "+1-555-0102",
+      "businessAddress": "2500 Technology Drive, Silicon Valley, CA 94025",
+      "logo": "https://example.com/logos/techgadgets-logo.png",
+      "banner": "https://example.com/banners/techgadgets-banner.jpg"
+    },
+    "pickupAddress": {
+      "name": "TechGadgets Warehouse",
+      "locality": "Silicon Valley Business Park",
+      "address": "2500 Technology Drive, Building A",
+      "city": "San Jose",
+      "state": "California",
+      "zipCode": "94025",
+      "phoneNumber": "+1-555-0102"
+    }
+  },
+  {
+    "sellerName": "Seller 2",
+    "phoneNumber": "+1-555-0201",
+    "email": "seller2@gmail.com",
+    "password": "Dinhtruong2k",
+    "businessDetails": {
+      "businessName": "Fashion Hub Boutique",
+      "businessEmail": "contact@fashionhub.com",
+      "businessPhoneNumber": "+1-555-0202",
+      "businessAddress": "1850 Fashion Avenue, New York, NY 10018",
+      "logo": "https://example.com/logos/fashionhub-logo.png",
+      "banner": "https://example.com/banners/fashionhub-banner.jpg"
+    },
+    "pickupAddress": {
+      "name": "Fashion Hub Distribution Center",
+      "locality": "Manhattan Fashion District",
+      "address": "1850 Fashion Avenue, Suite 300",
+      "city": "New York",
+      "state": "New York",
+      "zipCode": "10018",
+      "phoneNumber": "+1-555-0202"
+    }
+  },
+  {
+    "sellerName": "Seller 3",
+    "phoneNumber": "+1-555-0301",
+    "email": "seller3@gmail.com",
+    "password": "Dinhtruong2k",
+    "businessDetails": {
+      "businessName": "Home Essentials & More",
+      "businessEmail": "info@homeessentials.com",
+      "businessPhoneNumber": "+1-555-0302",
+      "businessAddress": "7200 Commerce Boulevard, Austin, TX 78701",
+      "logo": "https://example.com/logos/homeessentials-logo.png",
+      "banner": "https://example.com/banners/homeessentials-banner.jpg"
+    },
+    "pickupAddress": {
+      "name": "Home Essentials Fulfillment Center",
+      "locality": "Austin Commerce District",
+      "address": "7200 Commerce Boulevard, Unit 5",
+      "city": "Austin",
+      "state": "Texas",
+      "zipCode": "78701",
+      "phoneNumber": "+1-555-0302"
+    }
+  }
+]

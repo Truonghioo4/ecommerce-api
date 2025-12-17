@@ -29,7 +29,7 @@ public class WishlistServiceImpl implements WishlistService {
     }
 
     @Override
-    public Wishlist addProductToWishlist(User user, Product product) {
+    public Wishlist updateProductToWishlist(User user, Product product) {
         Wishlist wishlist = getWishlistByUserId(user);
 
         if (wishlist.getProducts().contains(product)) {
@@ -38,5 +38,15 @@ public class WishlistServiceImpl implements WishlistService {
             wishlist.getProducts().add(product);
         }
         return wishlistRepository.save(wishlist);
+    }
+
+    @Override
+    public void removeProductFromWishlist(User user, Product product){
+        Wishlist wishlist = getWishlistByUserId(user);
+        if (wishlist.getProducts().contains(product)) {
+            wishlist.getProducts().remove(product);
+        } else{
+            return;
+        }
     }
 }

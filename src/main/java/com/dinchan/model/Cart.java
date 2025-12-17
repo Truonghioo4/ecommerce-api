@@ -26,6 +26,4 @@ public class Cart {
     private int totalItem;
     private int totalMrpPrice;
     private int discount;
-    private String couponCode;
-
 }

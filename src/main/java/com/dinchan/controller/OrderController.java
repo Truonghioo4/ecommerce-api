@@ -1,6 +1,5 @@
 package com.dinchan.controller;
 
-import com.dinchan.domain.PaymentMethod;
 import com.dinchan.model.*;
 import com.dinchan.service.CartService;
 import com.dinchan.service.OrderService;
@@ -27,7 +26,6 @@ public class OrderController {
   @PostMapping()
   public ResponseEntity<Set<Order>> createOrder(
       @RequestBody Address shippingAddress,
-      @RequestParam PaymentMethod paymentMethod,
       @RequestHeader("Authorization")String jwt)
       throws Exception {
     User user = userService.findUserByJwtToken(jwt);
